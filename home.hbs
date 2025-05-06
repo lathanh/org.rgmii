@@ -9,4 +9,11 @@
 
 {{> "components/cta"}}
 
-{{> "components/post-list" feed="home" postFeedStyle=@custom.post_feed_style showTitle=true showSidebar=@custom.show_publication_info_sidebar}}
+{{!-- Home page main content: use content of paged named "Main" page --}}
+<main id="main">
+    {{#page}}
+        <section class="gh-content gh-canvas is-body">
+            {{content}}
+        </section>
+    {{/page}}
+</main>
